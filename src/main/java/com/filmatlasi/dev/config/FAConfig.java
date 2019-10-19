@@ -15,7 +15,6 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-import java.util.Arrays;
 import java.util.Collections;
 
 @Configuration
@@ -41,7 +40,7 @@ public class FAConfig {
      * Group FA contains operations related to reservations and agency mangement
      */
     @Bean
-    public Docket swaggerBRSApi() {
+    public Docket swaggerFilmAtlasiApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("FA")
                 .select()
@@ -60,11 +59,11 @@ public class FAConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("User")
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.starterkit.springboot.brs.config"))
+                .apis(RequestHandlerSelectors.basePackage("com.filmatlasi.dev.config"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo())
-                .securitySchemes(Arrays.asList(apiKey()));
+                .securitySchemes(Collections.singletonList(apiKey()));
     }
 
     private ApiInfo apiInfo() {

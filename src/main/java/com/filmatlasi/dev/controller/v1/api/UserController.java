@@ -12,7 +12,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/user")
-@Api(value="film-atlasi-application", description="Operations pertaining to user management in the BRS application")
+@Api(value="film-atlasi-application", description="Operations pertaining to user management in the filmatlasi application")
 public class UserController {
 
     @Autowired

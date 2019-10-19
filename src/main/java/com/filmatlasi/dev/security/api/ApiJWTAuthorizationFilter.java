@@ -45,11 +45,8 @@ public class ApiJWTAuthorizationFilter extends BasicAuthenticationFilter {
                     .setSigningKey(SECRET)
                     .parseClaimsJws(token.replace(TOKEN_PREFIX, ""))
                     .getBody();
-            // Extract the UserName
             String user = claims.getSubject();
-            // Extract the Roles
             ArrayList<String> roles = (ArrayList<String>) claims.get("roles");
-            // Then convert Roles to GrantedAuthority Object for injecting
             ArrayList<GrantedAuthority> list = new ArrayList<>();
             if (roles != null) {
                 for (String a : roles) {
