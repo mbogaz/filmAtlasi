@@ -1,4 +1,4 @@
-package com.filmatlasi.dev.controller.v1.api;
+package com.filmatlasi.dev.controller.v1;
 
 import com.filmatlasi.dev.dto.model.UserDto;
 import com.filmatlasi.dev.dto.model.UserSignupRequest;

@@ -44,7 +44,7 @@ public class FAConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("FA")
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.filmatlasi.dev.controller.v1.api"))
+                .apis(RequestHandlerSelectors.basePackage("com.filmatlasi.dev.controller.v1"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo())
